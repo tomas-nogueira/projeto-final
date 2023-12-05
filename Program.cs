@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<Contexto>
-    (options => options.UseSqlServer("Data Source=SP-1491010\\SQLSENAI;Initial Catalog = LoginPederneiras;" +
+    (options => options.UseSqlServer("Data Source=SP-1491010\\SQLSENAI;Initial Catalog = ProjetoFinalTomas;" +
                                         "Integrated Security = True;TrustServerCertificate = True"));
 
 var app = builder.Build();
@@ -29,6 +29,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Usuario}/{action=Login}/");
 
 app.Run();

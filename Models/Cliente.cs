@@ -6,7 +6,7 @@ namespace Projeto_final.Models
 {
     public class Cliente
     {
-        [Column("ClienteId")]
+        [Column("Id")]
         [Display(Name = "Cód. Cliente")]
         public int Id { get; set; }
 
@@ -34,14 +34,15 @@ namespace Projeto_final.Models
         public string NumeroCasaCliente { get; set; } = string.Empty;
 
         [Column("BairroCliente")]
-        [Display(Name = "BairroCliente")]
+        [Display(Name = "Bairro")]
 
         public string BairroCliente { get; set; } = string.Empty;
 
-        [Column("Cidadeid")]
-        [Display(Name = "Cidade")]
+        [ForeignKey("CidadeId")]
 
         public int CidadeId { get; set; }
+
+        public Cidade? Cidade { get; set; }
 
         [Column("TelefoneCelular")]
         [Display(Name = "Telefone Celular")]

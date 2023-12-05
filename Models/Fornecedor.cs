@@ -6,7 +6,7 @@ namespace Projeto_final.Models
 {
     public class Fornecedor
     {
-        [Column("FornecedorId")]
+        [Column("Id")]
         [Display(Name = "Cód. Fornecedor")]
         public int Id { get; set; }
 
@@ -16,12 +16,12 @@ namespace Projeto_final.Models
         public string NomeFornecedor { get; set; } = string.Empty;
 
         [Column("EmailFornecedor")]
-        [Display(Name = "Nome")]
+        [Display(Name = "Email")]
 
         public string EmailFornecedor { get; set; } = string.Empty;
 
         [Column("CnpjFornecedor")]
-        [Display(Name = "Nome")]
+        [Display(Name = "CNPJ")]
 
         public string CnpjFornecedor { get; set; } = string.Empty;
     }
