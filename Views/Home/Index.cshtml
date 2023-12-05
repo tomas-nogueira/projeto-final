@@ -1,8 +1,84 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
+<link href="~/css/home.css" rel="stylesheet" />
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bem vindo!</h1>
+    <div class="geral">
+        <div class="produtos">
+            <p class="titulo">Tudo sobre Produto(s)</p>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Produto" asp-action="Index">Produto</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="EntradaProduto" asp-action="Index">Entrada</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="SaidaProduto" asp-action="Index">Saída</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="TipoProduto" asp-action="Index">Tipo</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="TipoSaida" asp-action="Index">Tipo da saída</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Fornecedor" asp-action="Index">Fornecedor</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cep">
+            <p class="titulo">Localização</p>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Cidade" asp-action="Index">Cidade</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Estado" asp-action="Index">Estado</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Pais" asp-action="Index">País</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="cliente">
+            <p class="titulo">Cliente e usuário</p>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Cliente" asp-action="Index">Cliente</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+            <button class="cta">
+                <span class="hover-underline-animation"><a class="milagre" asp-area="" asp-controller="Usuario" asp-action="Index">Usuário</a></span>
+                <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+                    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
 </div>

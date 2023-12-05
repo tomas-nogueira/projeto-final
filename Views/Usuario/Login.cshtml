@@ -5,34 +5,24 @@
     Layout = null;
 }
 <link href="~/css/login.css" rel="stylesheet" />
-<h1>Login</h1>
-<h4>Digite o email e a senha para realizar o login.</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login">
+      <div class="container">
+          <form asp-action="Login" class="form-control">
+            <p class="title">Login</p>
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-            <div class="form-group">
-                <label asp-for="EmailUsuario" class="control-label"></label>
-                <input asp-for="EmailUsuario" class="form-control" />
+            <div class="input-field">
+                <input asp-for="EmailUsuario" class="input" type="text"/>
+                <label asp-for="EmailUsuario" class="label" for="input">Digite seu email</label>
                 <span asp-validation-for="EmailUsuario" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="SenhaUsuario" class="control-label"></label>
-                <input asp-for="SenhaUsuario" class="form-control" />
+            <div class="input-field">
+                <input asp-for="SenhaUsuario" class="input" type="password"/>
+                <label asp-for="SenhaUsuario" class="label" for="input">Digite sua senha</label>
                 <span asp-validation-for="SenhaUsuario" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn btn-primary" />
-            </div>
+            <a class="forget">Esqueceu sua senha?</a>
+            <input type="submit" value="Login" class="submit-btn" />
         </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+      </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
